@@ -37,7 +37,7 @@ function Login() {
 
         {/* Logo */}
         <h1 className="text-2xl font-bold text-indigo-600 text-center mb-2">
-          Freelancer Connect
+            Pasched
         </h1>
         <p className="text-gray-500 text-center mb-8">Welcome back!</p>
 

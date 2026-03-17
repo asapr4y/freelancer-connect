@@ -8,7 +8,7 @@ import BookingForm from './pages/BookingForm'
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/freelancer-connect">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />

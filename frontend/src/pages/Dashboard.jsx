@@ -157,6 +157,28 @@ function Dashboard() {
     }
   };
 
+  const getCategoryIcon = (category) => {
+  const icons = {
+    'Photography': '📸',
+    'Videography': '🎬',
+    'Design': '🎨',
+    'Development': '💻',
+    'Tutoring': '📚',
+    'Music Lessons': '🎵',
+    'Events Host': '🎤',
+    'Cake Artist': '🎂',
+    'Hair & Makeup': '💇',
+    'Fitness Trainer': '🧘',
+    'Handyman': '🔧',
+    'Driver': '🚗',
+    'Florist': '🌸',
+    'Pet Groomer': '🐶',
+    'House Cleaning': '🧹',
+    'Accounting': '📊',
+  }
+  return icons[category] || '👤'
+}
+
   // ─── RENDER ───────────────────────────────────────────
   return (
     <div className="min-h-screen bg-gray-50">
@@ -166,7 +188,7 @@ function Dashboard() {
           onClick={() => navigate("/")}
           className="text-2xl font-bold text-indigo-600 cursor-pointer"
         >
-          Freelancer Connect
+          Pasched{" "}
         </h1>
         <div className="flex items-center gap-4">
           <span className="text-gray-600 font-medium">
@@ -350,16 +372,10 @@ function Dashboard() {
                           Category
                         </p>
                         <p className="text-gray-800 dark:text-white font-medium">
-                          {freelancerForm.category === "Photography"
-                            ? "📸"
-                            : freelancerForm.category === "Tutoring"
-                              ? "📚"
-                              : freelancerForm.category === "Design"
-                                ? "🎨"
-                                : freelancerForm.category === "Development"
-                                  ? "💻"
-                                  : "👤"}{" "}
-                          {freelancerForm.category}
+                          <p className="text-gray-800 dark:text-white font-medium">
+                            {getCategoryIcon(freelancerForm.category)}{" "}
+                            {freelancerForm.category}
+                          </p>
                         </p>
                       </div>
                       <div className="px-6 py-4 border-b border-gray-100 dark:border-gray-800">
@@ -454,10 +470,22 @@ function Dashboard() {
                     className="w-full border border-gray-200 dark:border-gray-700 dark:bg-gray-800 dark:text-white rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-400"
                   >
                     <option value="">Select a category</option>
-                    <option value="Photography">Photography</option>
-                    <option value="Tutoring">Tutoring</option>
-                    <option value="Design">Design</option>
-                    <option value="Development">Development</option>
+                    <option value="Photography">📸 Photography</option>
+                    <option value="Videography">🎬 Videography</option>
+                    <option value="Design">🎨 Design</option>
+                    <option value="Development">💻 Development</option>
+                    <option value="Tutoring">📚 Tutoring</option>
+                    <option value="Music Lessons">🎵 Music Lessons</option>
+                    <option value="Events Host">🎤 Events Host</option>
+                    <option value="Cake Artist">🎂 Cake Artist</option>
+                    <option value="Hair & Makeup">💇 Hair & Makeup</option>
+                    <option value="Fitness Trainer">🧘 Fitness Trainer</option>
+                    <option value="Handyman">🔧 Handyman</option>
+                    <option value="Driver">🚗 Driver</option>
+                    <option value="Florist">🌸 Florist</option>
+                    <option value="Pet Groomer">🐶 Pet Groomer</option>
+                    <option value="House Cleaning">🧹 House Cleaning</option>
+                    <option value="Accounting">📊 Accounting</option>
                   </select>
                 </div>
 
